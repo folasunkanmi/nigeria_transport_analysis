@@ -2,14 +2,14 @@
 
 **Data Analytics Case Study** | Jupyter Notebook • Python • Pandas • Data Visualization
 
-Analysis of 240 inter-city trips across Nigeria focusing on fuel efficiency, revenue performance, delays, and customer satisfaction.
+Analysis of **240 inter-city trips** across Nigeria focusing on fuel efficiency, revenue performance, delays, road conditions, and customer satisfaction.
 
 ---
 
 ## Business Problem
 
 Transport operators in Nigeria face rising fuel costs, frequent delays, and pressure to maintain customer satisfaction while remaining profitable.  
-This project answers key operational questions:
+This project answers practical operational questions:
 
 - Which transport modes are most fuel-efficient?
 - Which routes generate the highest revenue and profit?
@@ -19,33 +19,36 @@ This project answers key operational questions:
 
 ---
 
-## Dataset Overview
+## Dataset Information
 
-| Detail                    | Description                                      |
-|---------------------------|--------------------------------------------------|
-| Records                   | 240 inter-city trips                             |
-| Time Period               | January 2026                                     |
-| Cities Covered            | Lagos, Abuja, Kano, Port Harcourt, Akure, Jos + others |
-| Key Metrics               | Distance, Fuel Consumed, Revenue, Operating Cost, Delay, Customer Rating, Passenger Count |
+| Detail              | Description                                      |
+|---------------------|--------------------------------------------------|
+| Records             | 240 inter-city trips                             |
+| Columns             | 23                                               |
+| Time Period         | January 2026                                     |
+| Cities Covered      | Lagos, Abuja, Kano, Port Harcourt, Akure, Jos + others |
+| Key Metrics         | Distance, Fuel Consumed, Revenue, Operating Cost, Delay, Customer Rating, Passenger Count |
+
+**Dataset Origin**: This is a **demonstration / sample dataset** created for analytical practice. It is designed to reflect realistic patterns in Nigerian inter-city transport operations but should **not** be treated as verified real operational data from any specific transport company.
 
 ---
 
-## Analysis Performed
+## Methodology
 
-1. **Fuel Efficiency Analysis**  
-   Compared fuel consumption per kilometre across different transport modes (BRT, Motorcycle, etc.).
+1. **Data Understanding & Cleaning**  
+   Loaded the dataset, checked for missing values, data types, and outliers using Pandas.
 
-2. **Revenue & Profitability Analysis**  
-   Examined total revenue, operating profit (Revenue – Operating Cost), and best-performing routes.
+2. **Feature Engineering**  
+   Created useful metrics such as fuel efficiency (litres per km), operating profit, and delay categories.
 
-3. **Delay Analysis**  
-   Investigated average delays by city, weather conditions, road quality, and time of day (Morning/Evening Peak).
+3. **Exploratory Data Analysis (EDA)**  
+   Analysed distributions, correlations, and patterns across transport modes, routes, weather, and road conditions.
 
-4. **Customer Experience Analysis**  
-   Explored the relationship between trip delays and customer ratings.
+4. **Visualization**  
+   Created clear charts to show relationships between delays, revenue, fuel use, and customer satisfaction.
 
-5. **Exploratory Data Analysis (EDA)**  
-   Data cleaning, missing value checks, outlier detection, and distribution analysis using Pandas.
+5. **Insight Generation & Recommendations**  
+   Translated findings into practical business recommendations for transport operators.
 
 ---
 
@@ -63,31 +66,73 @@ This project answers key operational questions:
 
 1. **Prioritise road quality improvements** on high-delay routes to reduce late arrivals and improve ratings.
 2. **Adjust scheduling** for Evening Peak periods — add buffer time or extra vehicles where delays are consistent.
-3. **Focus retention & marketing efforts** on high-revenue Lagos corridors.
-4. **Monitor fuel efficiency** closely for high-volume modes (especially BRT) and explore optimisation opportunities.
+3. **Focus commercial attention** on high-revenue Lagos corridors.
+4. **Monitor fuel efficiency** closely for high-volume modes (especially BRT).
 5. **Set a clear service standard**: aim to keep delays under 15 minutes to protect customer satisfaction.
 
 ---
 
-## Tools Used
+## Visualizations
 
-- **Python** (Pandas, NumPy)
-- **Jupyter Notebook**
-- **Matplotlib & Seaborn** for professional visualizations
-- Data cleaning & Exploratory Data Analysis techniques
+The Jupyter Notebook contains multiple professional charts, including:
+
+- Fuel efficiency by transport mode
+- Revenue and profit by route
+- Delay distribution by time of day and road condition
+- Relationship between delay and customer rating
+- Occupancy and performance comparisons
+
+> **Note for Portfolio**: Add screenshots of your key charts in an `images/` folder and embed them here for recruiters to see results quickly without opening the notebook.
+
+Example structure:
+```markdown
+![Fuel Efficiency by Mode](images/fuel_efficiency.png)
+![Delay vs Customer Rating](images/delay_vs_rating.png)
+```
 
 ---
 
-## How to Run
+## Power BI Dashboard (Recommended Addition)
+
+To make this project even stronger for recruiters, create a **Power BI dashboard** that includes:
+
+- KPI cards (Total Revenue, Average Delay, Average Rating, Total Passengers)
+- Filters for City, Transport Mode, and Date
+- Bar charts for revenue by route and delay by road condition
+- Scatter plot of Delay vs Customer Rating
+
+You can export visuals from the notebook or rebuild them in Power BI and add the `.pbix` file to this repository.
+
+---
+
+## How to Run the Notebook
+
+### Option 1: Local Setup (Recommended)
 
 ```bash
+# 1. Clone the repository
 git clone https://github.com/folasunkanmi/nigeria_transport_analysis.git
 cd nigeria_transport_analysis
-pip install pandas matplotlib seaborn jupyter
-jupyter notebook nigeria_transport_project.ipynb
+
+# 2. Create and activate a virtual environment (optional but recommended)
+python -m venv venv
+# Windows:
+venv\Scripts\activate
+# macOS / Linux:
+source venv/bin/activate
+
+# 3. Install required packages
+pip install pandas numpy matplotlib seaborn jupyter
+
+# 4. Launch Jupyter
+jupyter notebook
 ```
 
-Open the notebook and run all cells to reproduce the full analysis and visualizations.
+Then open `nigeria_transport_project.ipynb` and run all cells (**Cell → Run All**).
+
+### Option 2: Google Colab
+1. Upload the notebook and CSV to Google Colab
+2. Run the cells in order
 
 ---
 
@@ -97,7 +142,9 @@ Open the notebook and run all cells to reproduce the full analysis and visualiza
 nigeria_transport_analysis/
 ├── README.md
 ├── Nigeria_Transport_Analytics_Dataset.csv
-└── nigeria_transport_project.ipynb      # Full analysis notebook
+├── nigeria_transport_project.ipynb      # Full analysis notebook
+├── REPORT.md                            # Polished business report (optional)
+└── images/                              # Screenshots of visualizations (add these)
 ```
 
 ---
@@ -111,4 +158,4 @@ GitHub: [folasunkanmi](https://github.com/folasunkanmi)
 
 ---
 
-This project demonstrates the ability to turn raw operational data into clear business insights and actionable recommendations.
+This project demonstrates the ability to analyse operational data, generate clear insights, and provide actionable recommendations that support business decisions.
