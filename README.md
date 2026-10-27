@@ -82,26 +82,7 @@ The Jupyter Notebook contains multiple professional charts, including:
 - Relationship between delay and customer rating
 - Occupancy and performance comparisons
 
-> **Note for Portfolio**: Add screenshots of your key charts in an `images/` folder and embed them here for recruiters to see results quickly without opening the notebook.
-
-Example structure:
-```markdown
-![Fuel Efficiency by Mode](images/fuel_efficiency.png)
-![Delay vs Customer Rating](images/delay_vs_rating.png)
-```
-
----
-
-## Power BI Dashboard (Recommended Addition)
-
-To make this project even stronger for recruiters, create a **Power BI dashboard** that includes:
-
-- KPI cards (Total Revenue, Average Delay, Average Rating, Total Passengers)
-- Filters for City, Transport Mode, and Date
-- Bar charts for revenue by route and delay by road condition
-- Scatter plot of Delay vs Customer Rating
-
-You can export visuals from the notebook or rebuild them in Power BI and add the `.pbix` file to this repository.
+All visualizations are generated inside the notebook when you run it.
 
 ---
 
@@ -141,10 +122,9 @@ Then open `nigeria_transport_project.ipynb` and run all cells (**Cell → Run Al
 ```
 nigeria_transport_analysis/
 ├── README.md
+├── REPORT.md                            # Polished business report
 ├── Nigeria_Transport_Analytics_Dataset.csv
-├── nigeria_transport_project.ipynb      # Full analysis notebook
-├── REPORT.md                            # Polished business report (optional)
-└── images/                              # Screenshots of visualizations (add these)
+└── nigeria_transport_project.ipynb      # Full analysis notebook
 ```
 
 ---
